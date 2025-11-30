@@ -26,6 +26,6 @@ This script will:
 After installation, the MATLAB script (main.m) will automatically detect and add these dependencies to the MATLAB path using relative paths—no manual path editing required.
 
 ### 3. Setting parameters
-Open MATLAB and edit your own paremeters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
+Open MATLAB and edit your own parameters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
 
 This will launch the preprocessing workflow for infant EEG data, leveraging the installed dependencies.
