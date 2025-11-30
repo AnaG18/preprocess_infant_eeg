@@ -6,7 +6,7 @@ Built from a modified version of the APICE and HAPPE pipelines, adapted for the 
 ## 🚀 Getting Started
 ### 1. Clone the repository
 ``` bash
-git clone <your-repo-url>
+git clone https://github.com/AnaG18/preprocess_infant_eeg.git
 cd preprocess_infant_eeg
 ```
 
@@ -18,7 +18,9 @@ To make setup easy, all dependencies are installed automatically.
 #### Install
 Run the following command in the root folder of the repository:
 
-`python setup_dependencies.py`
+``` bash
+python setup_dependencies.py
+```
 
 This script will:
 - create an external_libs/ directory (if it doesn’t already exist)
