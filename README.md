@@ -5,7 +5,8 @@ Built from a modified version of the APICE and HAPPE pipelines, adapted for the 
 
 ## 🚀 Getting Started
 ### 1. Clone the repository
-```git clone <your-repo-url>
+``` bash
+git clone <your-repo-url>
 cd preprocess_infant_eeg
 ```
 
