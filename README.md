@@ -29,9 +29,57 @@ This script will:
 
 After installation, the MATLAB script (main.m) will automatically detect and add these dependencies to the MATLAB path using relative paths—no manual path editing required.
 
-### 3. Setting parameters
-Open MATLAB and edit your own parameters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
+### 3. Setting parameters and EEGlab path 
+Open MATLAB and make sure to edit the right path for EEGLAB into the variable Path2EEGLAB. Edit your own parameters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
+```
+% .........................................................................
+% Manual inspection and rejection parameters TODO!!!!!! 
+% .........................................................................
+ENABLE_MANUAL_BADCHANS = true;  % Enable manual bad channel selection
+ENABLE_VISUAL_INSPECTION = true; % Enable visual inspection at key steps
+PLOT_WINLENGTH = 30;             % Window length for plots (seconds)
+PLOT_DISPCHANS = 40;            % Number of channels to display
+SELECT_SUBSET = 1;              % Choose only a subset of the channels. 
+ENABLE_MANUAL_BADSEGS = false; 
 
+% Default cutting behavior
+CUT_EEG = true; % Set to false to skip cutting
+DEFAULT_CUT = false; % Set to false to specify custom time range
+CUT_FIRST_SECONDS = 15; % Seconds to cut from beginning (if default)
+CUT_LAST_SECONDS = 15; % Seconds to cut from end (if default)
+
+% Custom time range (if DEFAULT_CUT is false)
+CUSTOM_START_TIME = 0; % Start time in seconds
+CUSTOM_END_TIME = 300; % End time in seconds
+
+...
+
+% .........................................................................
+% Parameters for resampling 
+% .........................................................................
+do_resample = 1; 
+new_srate = 250; % Select new sample rate
+% .........................................................................
+% Parameters dealing with events 
+% .........................................................................
+do_arreangeevents = 0;
+Ppp.events = ex2_Ppp_Events;
+
+...
+
+% .........................................................................
+% Parameters for W-ICA
+% .........................................................................
+Ppp.ica = ex2_Ppp_wICA;
+do_applyICA = 1;
+
+...
+% .........................................................................
+% Plotting
+% .........................................................................
+do_plotrejection = 1;
+
+```
 This will launch the preprocessing workflow for infant EEG data, leveraging the installed dependencies.
 
 ## 📌 Access to data
