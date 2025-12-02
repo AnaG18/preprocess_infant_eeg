@@ -33,3 +33,30 @@ After installation, the MATLAB script (main.m) will automatically detect and add
 Open MATLAB and edit your own parameters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
 
 This will launch the preprocessing workflow for infant EEG data, leveraging the installed dependencies.
+
+## Access to data
+Download the data and make sure that the folder is under the same folder of this project. The final directory tree should look like this:  
+
+```
+preprocess_infant_eeg
+│   README.md
+│   main.m
+|   setup_dependencies.py     
+│
+└───data
+    │   README.md
+    │   participants.tsv
+    │
+    └───raw
+        │   
+        └───sub-1
+        │       sub-1_task-RestingState_channels.tsv
+        │       sub-1_task-RestingState_coordsystem.json
+        │       sub-1_task-RestingState_eeg.json
+        │       sub-1_task-RestingState_eeg.set
+        │       sub-1_task-RestingState_electrodes.tsv
+        │       sub-1_task-RestingState_events.tsv
+        │   
+        └───sub-2
+        ...
+```
