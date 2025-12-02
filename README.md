@@ -35,7 +35,7 @@ Open MATLAB and edit your own parameters in 'main.m'. You can decide to do a man
 This will launch the preprocessing workflow for infant EEG data, leveraging the installed dependencies.
 
 ## Access to data
-Download the data and make sure that the folder is under the same folder of this project. The final directory tree should look like this:  
+Download the data in [this link](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/agarc124_jh_edu/IgCoASa15es6SbEjMcfJ65BdAfYfzbvJD-alia2NIP0dj18?e=zjnEtE) and make sure that the folder is under the same folder of this project. The final directory tree should look like this:  
 
 ```
 preprocess_infant_eeg
