@@ -15,6 +15,10 @@ cd preprocess_infant_eeg
 This project relies on several external Git repositories (e.g., HAPPE, iMARA).
 To make setup easy, all dependencies are installed automatically.
 
+#### Required MATLAB Toolboxes
+- Signal Processing Toolbox
+- Statistics and Machine Learning
+
 #### Install
 Run the following command in the root folder of the repository:
 
@@ -30,6 +34,17 @@ This script will:
 After installation, the MATLAB script (main.m) will automatically detect and add these dependencies to the MATLAB path using relative paths—no manual path editing required.
 
 ### 3. Setting parameters and EEGlab path 
+
+#### **IMPORTANT**: you must edit this file located at `\external_libs\iMARA\iMARA\iMARA.m` and comment the following lines to avoid errors IF you want to use the simple 10-20 montage with 18 channels. 
+```
+39 % clab(7) = {'T7'};
+40 % clab(24) = {'T8'};
+...
+
+75 % i = contains(loc_labels, clab(7)); loc_labels(i) = {EEG.chanlocs(7).labels};
+76 % j = contains(loc_labels, clab(24)); loc_labels(j) = {EEG.chanlocs(24).labels};
+```
+
 Open MATLAB and make sure to edit the right path for EEGLAB into the variable Path2EEGLAB. Edit your own parameters in 'main.m'. You can decide to do a manual inspection of every single EEG by batches for safety and comodity of the user. 
 ```
 % .........................................................................
